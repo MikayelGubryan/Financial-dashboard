@@ -1,0 +1,22 @@
+Uncomment this file and remove this line. You can delete this file when you are finished.
+ 
+// ...
+ 
+</Link>
+ 
+Page
+ 
+      <div
+  className="relative w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px]"
+/>
+ 
+border-b-black
+ 
+            , brought to you by Vercel.
+ 
+            <a href="https://nextjs.org/learn/" className="text-blue-500">
+              Next.js Learn Course
+            </a>
+ 
+'../styles/globals.css'
+ 

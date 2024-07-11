@@ -1,0 +1,6 @@
+            <a href="https://nextjs.org/learn/" className="text-blue-500">
+              Next.js Learn Course
+            </a>
+ 
+'../styles/globals.css'
+ 
