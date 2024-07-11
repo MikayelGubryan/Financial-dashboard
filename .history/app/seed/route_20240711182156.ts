@@ -4,7 +4,27 @@ import { invoices, customers, revenue, users } from '../lib/placeholder-data';
 
 const client = await db.connect();
 
+export async function GET() {
+  try {
+    const client = await db.connect({
+      connectionString: process.env.POSTGRES_URL // Use environment variable
+    });
 
+    await client.sql`BEGIN`;
+    await seedUsers(client);
+    await seedCustomers(client);
+    await seedInvoices(client);
+    await seedRevenue(client);
+    await client.sql`COMMIT`;
+
+    return Response.json({ message: 'Database seeded successfully' });
+  } catch (error) {
+    await client?.sql`ROLLBACK`; // Ensure to roll back on error
+    return Response.json({ error }, { status: 500 });
+  } finally {
+    await client?.release(); // Release the client connection
+  }
+}
 
 async function seedUsers() {
   await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
