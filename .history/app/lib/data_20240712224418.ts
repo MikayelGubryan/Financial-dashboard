@@ -13,7 +13,7 @@ import { GET } from '../seed/route';
 
 export async function fetchRevenue() {
   try {
-    await GET();
+    GET
     console.log('Fetching revenue data...');
     await new Promise((resolve) => setTimeout(resolve, 3000));
 

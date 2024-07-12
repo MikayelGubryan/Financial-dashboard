@@ -8,12 +8,17 @@ import {
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
-import { GET } from '../seed/route';
 
+CREATE TABLE revenue (
+  id SERIAL PRIMARY KEY,
+  amount NUMERIC(10, 2) NOT NULL,
+  date DATE NOT NULL,
+  description TEXT
+);
 
 export async function fetchRevenue() {
   try {
-    await GET();
+
     console.log('Fetching revenue data...');
     await new Promise((resolve) => setTimeout(resolve, 3000));
 

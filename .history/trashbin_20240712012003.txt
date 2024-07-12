@@ -1,0 +1,33 @@
+POSTGRES_URL="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+POSTGRES_PRISMA_URL="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require&pgbouncer=true&connect_timeout=15"
+POSTGRES_URL_NO_SSL="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech:5432/verceldb"
+POSTGRES_URL_NON_POOLING="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+POSTGRES_USER="default"
+POSTGRES_HOST="ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech"
+POSTGRES_PASSWORD="CKBvo8G0REpm"
+POSTGRES_DATABASE="verceldb"
+ 
+<p>Customers Page</p>
+ 
+Uncomment this file and remove this line. You can delete this file when you are finished.
+ 
+// ...
+ 
+</Link>
+ 
+Page
+ 
+      <div
+  className="relative w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px]"
+/>
+ 
+border-b-black
+ 
+            , brought to you by Vercel.
+ 
+            <a href="https://nextjs.org/learn/" className="text-blue-500">
+              Next.js Learn Course
+            </a>
+ 
+'../styles/globals.css'
+ 

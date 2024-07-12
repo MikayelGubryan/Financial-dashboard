@@ -81,32 +81,31 @@ async function seedCustomers() {
 }
 
 async function seedRevenue() {
-  try {
-    await client.sql`
-      CREATE TABLE IF NOT EXISTS revenue (
-        month VARCHAR(4) NOT NULL UNIQUE,
-        revenue INT NOT NULL
-      );
-    `;
-
-    const insertedRevenue = await Promise.all(
-      revenue.map(
-        (rev) => client.sql`
-          INSERT INTO revenue (month, revenue)
-          VALUES (${rev.month}, ${rev.revenue})
-          ON CONFLICT (month) DO NOTHING;
-        `,
-      ),
+  await client.sql`
+    CREATE TABLE IF NOT EXISTS revenue (
+      month VARCHAR(4) NOT NULL UNIQUE,
+      revenue INT NOT NULL
     );
+  `;
 
-    return insertedRevenue;
-  } catch (error) {
-    console.error('Error seeding revenue:', error);
-    throw error; // Propagate the error so it can be caught and handled
-  }
+  const insertedRevenue = await Promise.all(
+    revenue.map(
+      (rev) => client.sql`
+        INSERT INTO revenue (month, revenue)
+        VALUES (${rev.month}, ${rev.revenue})
+        ON CONFLICT (month) DO NOTHING;
+      `,
+    ),
+  );
+
+  return insertedRevenue;
 }
 
 export async function GET() {
+  return Response.json({
+    message:
+      'Uncomment this file and remove this line. You can delete this file when you are finished.',
+  });
   try {
     await client.sql`BEGIN`;
     await seedUsers();

@@ -8,12 +8,12 @@ import {
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
-import { GET } from '../seed/route';
-
 
 export async function fetchRevenue() {
   try {
-    await GET();
+    Artificially delay a response for demo purposes.
+    Don't do this in production :)
+
     console.log('Fetching revenue data...');
     await new Promise((resolve) => setTimeout(resolve, 3000));
 

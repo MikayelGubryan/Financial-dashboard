@@ -6,14 +6,13 @@ import {
   InvoicesTable,
   LatestInvoiceRaw,
   Revenue,
-} from './definitions';
+} from '../seed/route';
 import { formatCurrency } from './utils';
-import { GET } from '../seed/route';
 
 
 export async function fetchRevenue() {
   try {
-    await GET();
+
     console.log('Fetching revenue data...');
     await new Promise((resolve) => setTimeout(resolve, 3000));
 

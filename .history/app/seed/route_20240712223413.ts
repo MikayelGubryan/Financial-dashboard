@@ -107,6 +107,7 @@ async function seedRevenue() {
 }
 
 export async function GET() {
+
   try {
     await client.sql`BEGIN`;
     await seedUsers();
