@@ -10,6 +10,10 @@ import {
 import { formatCurrency } from './utils';
 import { GET } from '../seed/route';
 
+const numberOfInvoices = sql`SELECT COUNT(*) FROM invoices`;
+const numberOfCustomers = sql`SELECT COUNT(*) FROM customers`;
+const totalPendingInvoices = sql`SELECT COUNT(*) FROM invoices WHERE status = 'pending'`;
+const totalPaidInvoices = sql`SELECT COUNT(*) FROM invoices WHERE status = 'paid'`;
 
 const data = await sql<LatestInvoiceRaw>`
   SELECT invoices.amount, customers.name, customers.image_url, customers.email

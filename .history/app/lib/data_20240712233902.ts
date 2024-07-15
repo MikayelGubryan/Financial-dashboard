@@ -11,6 +11,7 @@ import { formatCurrency } from './utils';
 import { GET } from '../seed/route';
 
 
+
 const data = await sql<LatestInvoiceRaw>`
   SELECT invoices.amount, customers.name, customers.image_url, customers.email
   FROM invoices

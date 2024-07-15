@@ -1,12 +1,3 @@
-const numberOfInvoices = sql`SELECT COUNT(*) FROM invoices`;
-const numberOfCustomers = sql`SELECT COUNT(*) FROM customers`;
-const totalPendingInvoices = sql`SELECT COUNT(*) FROM invoices WHERE status = 'pending'`;
-const totalPaidInvoices = sql`SELECT COUNT(*) FROM invoices WHERE status = 'paid'`;
- 
-ql`SELECT COUNT(*) FROM invoices WHERE status = 'paid'`; 
- 
-ql`SELECT COUNT(*) FROM invoices WHERE status = 'paid'`; 
- 
         {/* NOTE: Uncomment this code in Chapter 7 */}
  
   return Response.json({
