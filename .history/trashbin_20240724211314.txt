@@ -1,0 +1,133 @@
+<DashboardSkeleton />
+ 
+      {/* NOTE: Uncomment this code in Chapter 9 */}
+
+ 
+        <Card title="Collected" value={totalPaidInvoices} type="collected" /> 
+        <Card title="Pending" value={totalPendingInvoices} type="pending" />
+        <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
+        <Card
+          title="Total Customers"
+          value={numberOfCustomers}
+          type="customers"
+        /> 
+ 
+latestInvoices={latestInvoices}
+ 
+  latestInvoices,
+}: {
+  latestInvoices: LatestInvoice[];
+}) {
+ 
+  revenue,
+}: {
+  revenue: Revenue[];
+}) {
+ 
+  const revenue = await fetchRevenue();
+
+ 
+  fetchRevenue,
+ 
+const numberOfInvoices = sql`SELECT COUNT(*) FROM invoices`;
+const numberOfCustomers = sql`SELECT COUNT(*) FROM customers`;
+const totalPendingInvoices = sql`SELECT COUNT(*) FROM invoices WHERE status = 'pending'`;
+const totalPaidInvoices = sql`SELECT COUNT(*) FROM invoices WHERE status = 'paid'`;
+ 
+ql`SELECT COUNT(*) FROM invoices WHERE status = 'paid'`; 
+ 
+ql`SELECT COUNT(*) FROM invoices WHERE status = 'paid'`; 
+ 
+        {/* NOTE: Uncomment this code in Chapter 7 */}
+ 
+  return Response.json({
+  
+  });
+ 
+  message:
+      'Uncomment this file and remove this line. You can delete this file when you are finished.',
+ 
+  return Response.json({
+    message:
+      'Uncomment this file and remove this line. You can delete this file when you are finished.',
+  });
+ 
+  return Response.json({
+    message:
+      'Uncomment this file and remove this line. You can delete this file when you are finished.',
+  });
+ 
+    month VARCHAR(4) NOT NULL UNIQUE,
+      revenue INT NOT NULL
+    );
+  `;
+
+  const insertedRevenue = await Promise.all(
+    revenue.map(
+      (rev) => client.sql`
+        INSERT INTO revenue (month, revenue)
+        VALUES (${rev.month}, ${rev.revenue})
+        ON CONFLICT (month) DO NOTHING;
+      `,
+    ),
+  );
+
+  return insertedRevenue;
+}catch (error) {
+  console.error('Error seeding revenue:', error);
+  throw error; // Propagate the error so it can be caught and handled
+}
+ 
+revenue,
+ 
+    Artificially delay a response for demo purposes.
+    Don't do this in production :)
+ 
+      {/* NOTE: Uncomment this code in Chapter 7 */}
+
+ 
+  // NOTE: Uncomment this code in Chapter 7
+
+ 
+POSTGRES_URL="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+POSTGRES_PRISMA_URL="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require&pgbouncer=true&connect_timeout=15"
+POSTGRES_URL_NO_SSL="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech:5432/verceldb"
+POSTGRES_URL_NON_POOLING="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+POSTGRES_USER="default"
+POSTGRES_HOST="ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech"
+POSTGRES_PASSWORD="CKBvo8G0REpm"
+POSTGRES_DATABASE="verceldb"
+ 
+POSTGRES_URL="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+POSTGRES_PRISMA_URL="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require&pgbouncer=true&connect_timeout=15"
+POSTGRES_URL_NO_SSL="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech:5432/verceldb"
+POSTGRES_URL_NON_POOLING="postgres://default:CKBvo8G0REpm@ep-empty-cherry-a41r7m2k.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+POSTGRES_USER="default"
+POSTGRES_HOST="ep-empty-cherry-a41r7m2k-pooler.us-east-1.aws.neon.tech"
+POSTGRES_PASSWORD="CKBvo8G0REpm"
+POSTGRES_DATABASE="verceldb"
+ 
+<p>Customers Page</p>
+ 
+Uncomment this file and remove this line. You can delete this file when you are finished.
+ 
+// ...
+ 
+</Link>
+ 
+Page
+ 
+      <div
+  className="relative w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px]"
+/>
+ 
+border-b-black
+ 
+            , brought to you by Vercel.
+ 
+            <a href="https://nextjs.org/learn/" className="text-blue-500">
+              Next.js Learn Course
+            </a>
+ 
+'../styles/globals.css'
+ 
